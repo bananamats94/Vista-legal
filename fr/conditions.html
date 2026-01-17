@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions d'Utilisation - Vista</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1a1a1a;
+            --header-gradient: linear-gradient(135deg, #667eea 0%, #f59e0b 100%);
+            --section-bg: #ffffff;
+            --section-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --accent: #667eea;
+            --border: #f0f0f0;
+            --muted: #444;
+            --strong: #1a1a1a;
+            --link-bg: #667eea;
+            --link-bg-hover: #5a67d8;
+            --link-text: #ffffff;
+            --footer: #999999;
+            --toggle-bg: rgba(255, 255, 255, 0.2);
+            --toggle-text: #ffffff;
+            --toggle-border: rgba(255, 255, 255, 0.4);
+        }
+        :root[data-theme="dark"] {
+            --page-bg: #0f1115;
+            --text: #e5e7eb;
+            --section-bg: #171a21;
+            --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+            --border: #2a2f3a;
+            --muted: #cbd5e1;
+            --strong: #f8fafc;
+            --link-bg: #8b5cf6;
+            --link-bg-hover: #7c3aed;
+            --footer: #8a8f98;
+            --toggle-bg: rgba(0, 0, 0, 0.35);
+            --toggle-border: rgba(255, 255, 255, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 { font-size: 28px; margin-bottom: 5px; }
+        .header p { opacity: 0.9; font-size: 14px; }
+        .lang-switch {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            gap: 8px;
+        }
+        .lang-switch a {
+            background: var(--toggle-bg);
+            color: var(--toggle-text);
+            border: 1px solid var(--toggle-border);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .lang-switch a:hover { background: rgba(255, 255, 255, 0.3); }
+        .container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
+        .section {
+            background: var(--section-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--section-shadow);
+        }
+        h2 {
+            color: var(--accent);
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        p { margin-bottom: 12px; color: var(--muted); }
+        ul { margin: 15px 0; padding-left: 25px; }
+        li { margin-bottom: 8px; color: var(--muted); }
+        strong { color: var(--strong); }
+        a { color: var(--accent); }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: var(--link-bg);
+            color: var(--link-text);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        .back-link:hover { background: var(--link-bg-hover); }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a { color: var(--footer); }
+        .theme-toggle {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            border: 1px solid var(--toggle-border);
+            background: var(--toggle-bg);
+            color: var(--toggle-text);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Conditions d'Utilisation</h1>
+        <p>En vigueur : Janvier 2026</p>
+        <div class="lang-switch">
+            <a href="../de/nutzungsbedingungen.html">Deutsch</a>
+            <a href="../en/terms.html">English</a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button">Sombre</button>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Champ d'application</h2>
+            <p>Les présentes conditions d'utilisation s'appliquent à l'utilisation de l'application Vista ("Application"). En utilisant l'Application, vous acceptez ces conditions.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Description du service</h2>
+            <p>Vista est une application de planification financière pour :</p>
+            <ul>
+                <li>Planifier et suivre vos objectifs d'épargne</li>
+                <li>Visualiser l'évolution de votre patrimoine</li>
+                <li>Planifier le remboursement de vos dettes avec différentes stratégies</li>
+                <li>Optimisation fiscale (Premium)</li>
+                <li>Planification de scénarios et simulation Monte Carlo (Premium)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Absence de conseil financier</h2>
+            <p><strong>Important :</strong> Vista ne fournit <strong>pas</strong> de conseils financiers, fiscaux ou d'investissement. Tous les calculs et projections sont fournis à titre informatif uniquement. Pour des conseils contraignants, consultez un conseiller financier ou fiscal qualifié.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Vista Premium</h2>
+            <p>Vista Premium offre des fonctionnalités étendues via :</p>
+            <ul>
+                <li><strong>Achat unique :</strong> Paiement unique, accès illimité à vie</li>
+            </ul>
+            <p>Les achats sont facturés via votre compte Apple ID. Conformément à la politique de l'App Store, vous disposez d'un délai de 14 jours pour demander un remboursement.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Limitation de responsabilité</h2>
+            <p>L'Application est fournie "en l'état". Nous ne garantissons pas :</p>
+            <ul>
+                <li>L'exactitude des calculs et projections</li>
+                <li>Les décisions financières prises sur la base de l'Application</li>
+                <li>La perte de données due à des problèmes techniques</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Propriété intellectuelle</h2>
+            <p>Tous les droits sur l'Application, y compris le design, le code et le contenu, restent la propriété du développeur.</p>
+        </div>
+
+        <div class="section">
+            <h2>7. Modifications</h2>
+            <p>Nous nous réservons le droit de modifier ces conditions. Les modifications importantes seront communiquées dans l'Application.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Droit applicable</h2>
+            <p>Le droit allemand s'applique. Le tribunal compétent est, dans la mesure où la loi le permet, celui du lieu d'établissement du développeur.</p>
+            <p>Pour les consommateurs résidant en France, les dispositions impératives du Code de la consommation français restent applicables.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Droit de rétractation</h2>
+            <p>Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les contenus numériques non fournis sur un support matériel dont l'exécution a commencé avec votre accord préalable et exprès et votre renonciation à votre droit de rétractation.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. Contact</h2>
+            <p>Pour toute question, contactez-nous à : <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+        </div>
+
+        <a href="mentions-legales.html" class="back-link">Mentions légales</a>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 CodeCraft · Vista</p>
+    </div>
+    <script>
+        (function() {
+            const root = document.documentElement;
+            const toggle = document.getElementById('theme-toggle');
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (prefersDark ? 'dark' : 'light');
+            root.dataset.theme = theme;
+            toggle.textContent = theme === 'dark' ? 'Clair' : 'Sombre';
+            toggle.addEventListener('click', () => {
+                const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                root.dataset.theme = nextTheme;
+                localStorage.setItem('theme', nextTheme);
+                toggle.textContent = nextTheme === 'dark' ? 'Clair' : 'Sombre';
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Vista</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1a1a1a;
+            --header-gradient: linear-gradient(135deg, #667eea 0%, #f59e0b 100%);
+            --section-bg: #ffffff;
+            --section-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --accent: #667eea;
+            --border: #f0f0f0;
+            --muted: #444;
+            --strong: #1a1a1a;
+            --link-bg: #667eea;
+            --link-bg-hover: #5a67d8;
+            --link-text: #ffffff;
+            --footer: #999999;
+            --toggle-bg: rgba(255, 255, 255, 0.2);
+            --toggle-text: #ffffff;
+            --toggle-border: rgba(255, 255, 255, 0.4);
+        }
+        :root[data-theme="dark"] {
+            --page-bg: #0f1115;
+            --text: #e5e7eb;
+            --section-bg: #171a21;
+            --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+            --border: #2a2f3a;
+            --muted: #cbd5e1;
+            --strong: #f8fafc;
+            --link-bg: #8b5cf6;
+            --link-bg-hover: #7c3aed;
+            --footer: #8a8f98;
+            --toggle-bg: rgba(0, 0, 0, 0.35);
+            --toggle-border: rgba(255, 255, 255, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 { font-size: 28px; margin-bottom: 5px; }
+        .header p { opacity: 0.9; font-size: 14px; }
+        .lang-switch {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            gap: 8px;
+        }
+        .lang-switch a {
+            background: var(--toggle-bg);
+            color: var(--toggle-text);
+            border: 1px solid var(--toggle-border);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .lang-switch a:hover { background: rgba(255, 255, 255, 0.3); }
+        .container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
+        .section {
+            background: var(--section-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--section-shadow);
+        }
+        h2 {
+            color: var(--accent);
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+        p { margin-bottom: 12px; color: var(--muted); }
+        strong { color: var(--strong); }
+        a { color: var(--accent); }
+        .links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .links a:hover { text-decoration: underline; }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a { color: var(--footer); }
+        .theme-toggle {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            border: 1px solid var(--toggle-border);
+            background: var(--toggle-bg);
+            color: var(--toggle-text);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mentions Légales</h1>
+        <p>Vista · CodeCraft</p>
+        <div class="lang-switch">
+            <a href="../de/impressum.html">Deutsch</a>
+            <a href="../en/imprint.html">English</a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button">Sombre</button>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Éditeur</h2>
+            <p><strong>CodeCraft</strong><br>
+            Matthias Steins<br>
+            Stationsweg 69<br>
+            41068 Moenchengladbach<br>
+            Allemagne</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email : <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Directeur de la publication</h2>
+            <p><strong>Matthias Steins</strong><br>
+            Stationsweg 69<br>
+            41068 Moenchengladbach<br>
+            Allemagne</p>
+        </div>
+
+        <div class="section">
+            <h2>Hébergement</h2>
+            <p>L'application Vista est distribuée via l'App Store d'Apple Inc.</p>
+            <p>Apple Inc.<br>
+            One Apple Park Way<br>
+            Cupertino, CA 95014<br>
+            États-Unis</p>
+        </div>
+
+        <div class="section">
+            <h2>Limitation de responsabilité</h2>
+            <p><strong>Responsabilité du contenu :</strong> Le contenu de nos pages a été créé avec le plus grand soin. Cependant, nous ne pouvons garantir l'exactitude, l'exhaustivité et l'actualité du contenu.</p>
+            <p><strong>Responsabilité des liens :</strong> Notre offre contient des liens vers des sites web externes de tiers, sur le contenu desquels nous n'avons aucune influence. Par conséquent, nous ne pouvons accepter aucune responsabilité pour ce contenu externe.</p>
+        </div>
+
+        <div class="section">
+            <h2>Propriété intellectuelle</h2>
+            <p>Le contenu et les œuvres créés par les exploitants du site sur ces pages sont soumis au droit d'auteur. La reproduction, le traitement, la distribution et toute forme d'exploitation en dehors des limites du droit d'auteur nécessitent le consentement écrit de l'auteur ou du créateur concerné.</p>
+        </div>
+
+        <div class="section">
+            <h2>Règlement des litiges</h2>
+            <p>La Commission européenne met à disposition une plateforme de règlement en ligne des litiges (RLL) : <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
+            <p>Nous ne sommes ni obligés ni disposés à participer à une procédure de règlement des litiges devant un organisme de médiation des consommateurs.</p>
+        </div>
+
+        <div class="section">
+            <h2>Informations légales complémentaires</h2>
+            <div class="links">
+                <a href="confidentialite.html">Politique de confidentialité</a>
+                <a href="conditions.html">Conditions d'utilisation</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 CodeCraft · Vista</p>
+    </div>
+    <script>
+        (function() {
+            const root = document.documentElement;
+            const toggle = document.getElementById('theme-toggle');
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (prefersDark ? 'dark' : 'light');
+            root.dataset.theme = theme;
+            toggle.textContent = theme === 'dark' ? 'Clair' : 'Sombre';
+            toggle.addEventListener('click', () => {
+                const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                root.dataset.theme = nextTheme;
+                localStorage.setItem('theme', nextTheme);
+                toggle.textContent = nextTheme === 'dark' ? 'Clair' : 'Sombre';
+            });
+        })();
+    </script>
+</body>
+</html>
