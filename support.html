@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stashy Support</title>
+    <style>
+        :root {
+            --bg-dark: #1A1A2E;
+            --bg-card: #16213E;
+            --gold: #FFD700;
+            --text: #FFFFFF;
+            --text-secondary: #A0A0B0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--gold);
+        }
+        .card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .card a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        .contact-btn:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .lang-switch a:hover, .lang-switch a.active {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="#" class="active">English</a>
+            <a href="de/support.html">Deutsch</a>
+        </div>
+
+        <div class="logo">🌿</div>
+        <h1>Stashy Support</h1>
+        <p class="subtitle">We're here to help!</p>
+
+        <div class="card">
+            <h2>📧 Contact Us</h2>
+            <p>Have a question, found a bug, or want to request a feature? We'd love to hear from you!</p>
+            <a href="mailto:support@stashy.app" class="contact-btn">Email Support</a>
+        </div>
+
+        <div class="card">
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>How do I create a team?</h3>
+                <p>Tap the Teams tab, then tap "Create Team". Choose a template or start from scratch. Share the invite code with your friends!</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How does settlement work?</h3>
+                <p>After your event, go to the Settlement view. Stashy automatically calculates who owes whom. You can use PayPal.me or Revolut to settle directly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I use different currencies?</h3>
+                <p>Yes! Stashy supports 20+ currencies including EUR, USD, GBP, CHF, and more. You can set a team currency and add expenses in any currency.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What's included in Pro?</h3>
+                <p>Pro includes unlimited teams, members and expenses, receipt scanner, recurring expenses, and priority support.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I restore my purchase?</h3>
+                <p>Go to Settings → Stashy Pro → Restore Purchases. Your subscription will be restored automatically.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my data secure?</h3>
+                <p>Yes! Stashy uses Apple's CloudKit for sync, which means your data is stored in your private iCloud container. We don't have access to your data.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📱 App Information</h2>
+            <p>
+                <strong>Version:</strong> 1.0.0<br>
+                <strong>Platform:</strong> iOS 17.0+<br>
+                <strong>Developer:</strong> Matthias Steins
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>
+                <a href="en/privacy.html">Privacy Policy</a> ·
+                <a href="en/terms.html">Terms of Service</a> ·
+                <a href="en/imprint.html">Imprint</a>
+            </p>
+            <p style="margin-top: 12px;">© 2025 Stashy. Made with 💚</p>
+        </div>
+    </div>
+</body>
+</html>

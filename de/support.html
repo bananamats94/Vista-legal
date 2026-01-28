@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stashy Support</title>
+    <style>
+        :root {
+            --bg-dark: #1A1A2E;
+            --bg-card: #16213E;
+            --gold: #FFD700;
+            --text: #FFFFFF;
+            --text-secondary: #A0A0B0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--gold);
+        }
+        .card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .card a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        .contact-btn:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .lang-switch a:hover, .lang-switch a.active {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="../support.html">English</a>
+            <a href="#" class="active">Deutsch</a>
+        </div>
+
+        <div class="logo">🌿</div>
+        <h1>Stashy Support</h1>
+        <p class="subtitle">Wir helfen dir gerne!</p>
+
+        <div class="card">
+            <h2>📧 Kontakt</h2>
+            <p>Hast du eine Frage, einen Bug gefunden oder einen Feature-Wunsch? Wir freuen uns auf deine Nachricht!</p>
+            <a href="mailto:support@stashy.app" class="contact-btn">E-Mail schreiben</a>
+        </div>
+
+        <div class="card">
+            <h2>❓ Häufige Fragen</h2>
+
+            <div class="faq-item">
+                <h3>Wie erstelle ich ein Team?</h3>
+                <p>Tippe auf den Teams-Tab und dann auf "Team erstellen". Wähle ein Template oder starte von vorne. Teile den Einladungscode mit deinen Freunden!</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Wie funktioniert die Abrechnung?</h3>
+                <p>Nach eurem Event gehst du zur Abrechnung. Stashy berechnet automatisch, wer wem wie viel schuldet. Mit PayPal.me oder Revolut kannst du direkt bezahlen.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Kann ich verschiedene Währungen nutzen?</h3>
+                <p>Ja! Stashy unterstützt 20+ Währungen inkl. EUR, USD, GBP, CHF und mehr. Du kannst eine Team-Währung festlegen und Ausgaben in jeder Währung hinzufügen.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Was ist in Pro enthalten?</h3>
+                <p>Pro beinhaltet unbegrenzte Teams, Mitglieder und Ausgaben, Quittungs-Scanner, wiederkehrende Ausgaben und prioritären Support.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Wie stelle ich meinen Kauf wieder her?</h3>
+                <p>Gehe zu Einstellungen → Stashy Pro → Käufe wiederherstellen. Dein Abo wird automatisch wiederhergestellt.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Sind meine Daten sicher?</h3>
+                <p>Ja! Stashy nutzt Apples CloudKit für die Synchronisation. Deine Daten werden in deinem privaten iCloud-Container gespeichert. Wir haben keinen Zugriff auf deine Daten.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📱 App-Informationen</h2>
+            <p>
+                <strong>Version:</strong> 1.0.0<br>
+                <strong>Plattform:</strong> iOS 17.0+<br>
+                <strong>Entwickler:</strong> Matthias Steins
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>
+                <a href="datenschutz.html">Datenschutz</a> ·
+                <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> ·
+                <a href="impressum.html">Impressum</a>
+            </p>
+            <p style="margin-top: 12px;">© 2025 Stashy. Made with 💚</p>
+        </div>
+    </div>
+</body>
+</html>
