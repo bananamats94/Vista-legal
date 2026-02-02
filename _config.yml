@@ -1,0 +1,12 @@
+# Jekyll configuration for GitHub Pages
+# Ensures .well-known directory is included for Universal Links
+
+include:
+  - .well-known
+
+# Disable Jekyll processing for the apple-app-site-association file
+defaults:
+  - scope:
+      path: ".well-known"
+    values:
+      layout: null

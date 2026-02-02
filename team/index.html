@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Stashy Team</title>
+    <meta name="apple-itunes-app" content="app-id=6504628638">
+    <style>
+        :root {
+            --gold: #f59e0b;
+            --bg: #0f1115;
+            --card: #171a21;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, var(--gold) 100%);
+            border-radius: 24px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+
+        .code-box {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .code-label {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .code {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: 'SF Mono', Monaco, monospace;
+            color: var(--gold);
+            letter-spacing: 4px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 12px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        .button.secondary {
+            background: var(--card);
+            color: var(--text);
+        }
+
+        .footer {
+            margin-top: 32px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .loading {
+            display: none;
+            margin: 20px 0;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--card);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🌿</div>
+        <h1>Join Stashy Team</h1>
+        <p class="subtitle">You've been invited to join a savings team!</p>
+
+        <div class="code-box">
+            <div class="code-label">Team Code</div>
+            <div class="code" id="teamCode">------</div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 12px; color: var(--muted);">Opening Stashy...</p>
+        </div>
+
+        <div id="buttons">
+            <a href="#" class="button" id="openApp">Open in Stashy</a>
+            <a href="https://apps.apple.com/app/stashy-savings-goals/id6504628638" class="button secondary">
+                Download Stashy
+            </a>
+        </div>
+
+        <p class="footer">
+            Stashy helps you save together with friends.<br>
+            Split expenses fairly and reach your goals faster.
+        </p>
+    </div>
+
+    <script>
+        // Extract team code from URL path
+        const path = window.location.pathname;
+        const parts = path.split('/').filter(p => p);
+        const code = parts.length > 1 ? parts[1].toUpperCase() : null;
+
+        if (code) {
+            document.getElementById('teamCode').textContent = code;
+
+            const customSchemeURL = `stashy://join/${code}`;
+            const openAppBtn = document.getElementById('openApp');
+
+            openAppBtn.href = customSchemeURL;
+
+            // Try to open app automatically on mobile
+            if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+                document.getElementById('loading').classList.add('active');
+                document.getElementById('buttons').style.display = 'none';
+
+                // Try custom URL scheme
+                window.location.href = customSchemeURL;
+
+                // If app doesn't open after 2 seconds, show buttons
+                setTimeout(() => {
+                    document.getElementById('loading').classList.remove('active');
+                    document.getElementById('buttons').style.display = 'block';
+                }, 2000);
+            }
+        } else {
+            document.getElementById('teamCode').textContent = 'Invalid';
+            document.getElementById('openApp').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

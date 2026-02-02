@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "4737WR3QKT.com.matthiassteins.Stashy",
+        "paths": [
+          "/join/*",
+          "/team/*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "4737WR3QKT.com.matthiassteins.Stashy"
+    ]
+  }
+}
