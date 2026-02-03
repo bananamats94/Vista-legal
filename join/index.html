@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Stashy Team</title>
-    <meta name="apple-itunes-app" content="app-id=6504628638">
+    <title>Team-Einladung | Stashy</title>
+
+    <!-- Smart App Banner - opens app with team code -->
+    <meta name="apple-itunes-app" content="app-id=6504628638, app-argument=stashy://join/CODE">
+
+    <!-- Open Graph Tags for nice link previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Du wurdest eingeladen!">
+    <meta property="og:description" content="Tritt dem Team bei und spart gemeinsam mit Stashy">
+    <meta property="og:image" content="https://bananamats94.github.io/Stashy-legal/assets/invite-preview.png">
+    <meta property="og:url" content="https://bananamats94.github.io/Stashy-legal/join/">
+    <meta property="og:site_name" content="Stashy">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Du wurdest eingeladen!">
+    <meta name="twitter:description" content="Tritt dem Team bei und spart gemeinsam mit Stashy">
+    <meta name="twitter:image" content="https://bananamats94.github.io/Stashy-legal/assets/invite-preview.png">
+
     <style>
         :root {
             --gold: #f59e0b;
+            --purple: #667eea;
             --bg: #0f1115;
             --card: #171a21;
             --text: #e5e7eb;
@@ -39,24 +57,35 @@
         .logo {
             width: 100px;
             height: 100px;
-            background: linear-gradient(135deg, #667eea 0%, var(--gold) 100%);
+            background: linear-gradient(135deg, var(--purple) 0%, var(--gold) 100%);
             border-radius: 24px;
             margin: 0 auto 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .logo svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
         }
 
         h1 {
             font-size: 28px;
             margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--purple), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
             color: var(--muted);
             margin-bottom: 32px;
             font-size: 16px;
+            line-height: 1.5;
         }
 
         .code-box {
@@ -64,50 +93,84 @@
             border-radius: 16px;
             padding: 24px;
             margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         .code-label {
             color: var(--muted);
             font-size: 14px;
             margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .code {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
-            font-family: 'SF Mono', Monaco, monospace;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
             color: var(--gold);
-            letter-spacing: 4px;
+            letter-spacing: 6px;
         }
 
         .button {
             display: inline-block;
-            background: var(--gold);
-            color: #000;
+            background: linear-gradient(135deg, var(--purple) 0%, var(--gold) 100%);
+            color: #fff;
             padding: 16px 32px;
-            border-radius: 12px;
+            border-radius: 14px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 17px;
             width: 100%;
             margin-bottom: 12px;
-            transition: transform 0.2s, opacity 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
         }
 
         .button:hover {
             transform: scale(1.02);
-            opacity: 0.9;
+            box-shadow: 0 6px 30px rgba(102, 126, 234, 0.4);
         }
 
         .button.secondary {
             background: var(--card);
             color: var(--text);
+            box-shadow: none;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .button.secondary:hover {
+            background: #1f2937;
+            box-shadow: none;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 32px 0;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .feature-text {
+            font-size: 12px;
+            color: var(--muted);
         }
 
         .footer {
             margin-top: 32px;
             color: var(--muted);
             font-size: 14px;
+            line-height: 1.6;
         }
 
         .loading {
@@ -120,8 +183,8 @@
         }
 
         .spinner {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border: 3px solid var(--card);
             border-top-color: var(--gold);
             border-radius: 50%;
@@ -132,55 +195,89 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+
+        .app-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .app-badges img {
+            height: 44px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">🌿</div>
-        <h1>Join Stashy Team</h1>
-        <p class="subtitle">You've been invited to join a savings team!</p>
+        <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+        </div>
+
+        <h1>Team-Einladung</h1>
+        <p class="subtitle">Du wurdest eingeladen, einem Team beizutreten und gemeinsam zu sparen!</p>
 
         <div class="code-box">
-            <div class="code-label">Team Code</div>
+            <div class="code-label">Team-Code</div>
             <div class="code" id="teamCode">------</div>
         </div>
 
         <div class="loading" id="loading">
             <div class="spinner"></div>
-            <p style="margin-top: 12px; color: var(--muted);">Opening Stashy...</p>
+            <p style="margin-top: 12px; color: var(--muted);">Stashy wird geöffnet...</p>
         </div>
 
         <div id="buttons">
-            <a href="#" class="button" id="openApp">Open in Stashy</a>
+            <a href="#" class="button" id="openApp">In Stashy öffnen</a>
             <a href="https://apps.apple.com/app/stashy-savings-goals/id6504628638" class="button secondary">
-                Download Stashy
+                App herunterladen
             </a>
         </div>
 
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <div class="feature-text">Gemeinsam sparen</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-text">Ausgaben teilen</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-text">Ziele erreichen</div>
+            </div>
+        </div>
+
         <p class="footer">
-            Stashy helps you save together with friends.<br>
-            Split expenses fairly and reach your goals faster.
+            Stashy hilft euch, gemeinsam zu sparen.<br>
+            Teilt Ausgaben fair und erreicht eure Ziele schneller.
         </p>
     </div>
 
     <script>
         // Extract team code from URL path
-        // Handles: /Stashy-legal/join/CODE or /join/CODE
         const path = window.location.pathname;
         const parts = path.split('/').filter(p => p);
-        // Find index of 'join' or 'team' and get the next part
         const joinIndex = parts.findIndex(p => p.toLowerCase() === 'join' || p.toLowerCase() === 'team');
         const code = (joinIndex >= 0 && joinIndex + 1 < parts.length) ? parts[joinIndex + 1].toUpperCase() : null;
 
         if (code) {
             document.getElementById('teamCode').textContent = code;
 
+            // Update Smart App Banner with actual code
+            const metaTag = document.querySelector('meta[name="apple-itunes-app"]');
+            if (metaTag) {
+                metaTag.content = `app-id=6504628638, app-argument=stashy://join/${code}`;
+            }
+
             const customSchemeURL = `stashy://join/${code}`;
             const openAppBtn = document.getElementById('openApp');
-
             openAppBtn.href = customSchemeURL;
 
-            // Try to open app automatically on mobile
+            // Try to open app automatically on iOS
             if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
                 document.getElementById('loading').classList.add('active');
                 document.getElementById('buttons').style.display = 'none';
@@ -188,14 +285,14 @@
                 // Try custom URL scheme
                 window.location.href = customSchemeURL;
 
-                // If app doesn't open after 2 seconds, show buttons
+                // If app doesn't open after 2.5 seconds, show buttons
                 setTimeout(() => {
                     document.getElementById('loading').classList.remove('active');
                     document.getElementById('buttons').style.display = 'block';
-                }, 2000);
+                }, 2500);
             }
         } else {
-            document.getElementById('teamCode').textContent = 'Invalid';
+            document.getElementById('teamCode').textContent = 'Ungültig';
             document.getElementById('openApp').style.display = 'none';
         }
     </script>

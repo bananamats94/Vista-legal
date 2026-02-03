@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stashy - Rechtliche Informationen
+    <title>Stashy - Gemeinsam teilen & sparen</title>
+
+    <!-- Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6504628638">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stashy - Gemeinsam teilen & sparen">
+    <meta property="og:description" content="Die App für gemeinsame Ausgaben und Sparziele. Teilt fair, spart zusammen, erreicht eure Ziele.">
+    <meta property="og:image" content="https://bananamats94.github.io/Stashy-legal/assets/og-preview.png">
+    <meta property="og:url" content="https://bananamats94.github.io/Stashy-legal/">
+    <meta property="og:site_name" content="Stashy">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stashy - Gemeinsam teilen & sparen">
+    <meta name="twitter:description" content="Die App für gemeinsame Ausgaben und Sparziele.">
+    <meta name="twitter:image" content="https://bananamats94.github.io/Stashy-legal/assets/og-preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
     <style>
         :root {
             color-scheme: light dark;
@@ -80,6 +101,37 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
+        /* App Download Section */
+        .app-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--link-bg);
+        }
+        .app-section h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        .app-section p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .app-store-btn {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .app-store-btn:hover {
+            transform: scale(1.05);
+        }
+
         .lang-section {
             margin-bottom: 25px;
         }
@@ -139,12 +191,21 @@
 <body>
     <div class="header">
         <h1>Stashy</h1>
-        <p>Rechtliche Informationen</p>
+        <p>Gemeinsam teilen & sparen</p>
         <button class="theme-toggle" id="theme-toggle" type="button">Dark</button>
     </div>
 
     <div class="container">
         <div class="card">
+            <!-- App Download -->
+            <div class="app-section">
+                <h3>📱 Jetzt herunterladen</h3>
+                <p>Teilt Ausgaben fair und erreicht gemeinsam eure Sparziele.</p>
+                <a href="https://apps.apple.com/app/stashy-savings-goals/id6504628638" class="app-store-btn">
+                    Im App Store laden
+                </a>
+            </div>
+
             <h2>Rechtliche Dokumente</h2>
 
             <div class="lang-section">
@@ -176,13 +237,13 @@
 
             <div class="contact">
                 <p>Kontakt / Contact</p>
-                <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a>
+                <a href="mailto:stashy@gmx.net">stashy@gmx.net</a>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>© 2026 CodeCraft · Stashy</p>
+        <p>© 2026 Stashy</p>
     </div>
     <script>
         (function() {
